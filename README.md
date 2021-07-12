@@ -4,6 +4,12 @@ Was having some trouble to work with the library using Next/Typescript in an exi
 
 # Starting
 
+First of all:
+
+```powershell
+npm install next-i18next
+```
+
 There're four important steps:
 
 - Create a next-i18next.config.js
