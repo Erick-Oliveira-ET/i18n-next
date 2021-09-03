@@ -51,6 +51,24 @@ module.exports = {
 
 In the public/locales goes all the translation folders where the translation files are. They're just classic jsons.
 
+
+## _app
+
+In the _app it's necessary to encapsulate the MyApp function with the appWithTranslation function when exporting it.
+
+```javascript
+
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { appWithTranslation } from "next-i18next";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+export default appWithTranslation(MyApp);
+
+```
+
 ## Using the translation hook
 
 In the files of the pages that will be translated, in the server side, the translations that will be used are loaded and the hook useTranslation is used to specify the translation files.
